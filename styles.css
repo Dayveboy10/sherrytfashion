@@ -1,0 +1,432 @@
+/* Root Colors */
+:root {
+    --gradient: linear-gradient(to right, #c09be6, #f5bce4);
+    --text-dark: #444;
+    --text-primary: #6b48c6;
+    --white: #ffffff;
+    --search-bg: #f2e9f7;
+  }
+  
+   
+
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: var(--white);
+    color: var(--text-dark);
+  }
+  
+  /* Header */
+  header {
+    background: var(--gradient);
+    padding: 1rem 2rem;
+    font-size: 20px;
+  }
+  
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  nav a {
+    text-decoration:none;
+    font-weight: 600;
+    color: black;
+  }
+  nav a:hover{
+  text-decoration: none;
+  color: #fff;
+  }
+  
+
+  nav ul li:not(:last-child)::after {
+    content: '|';
+    margin-left: 1rem;
+    color: var(--text-dark); 
+    font-weight: normal;
+  }
+  
+  
+  /* Hero Section */
+  .flex-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: var(--gradient);
+    min-height: 80vh;
+  }
+
+  
+  .hero-text {
+    position: relative;
+    bottom: 70px;
+    margin-bottom: 50%;
+    flex: 1;
+    min-width: 280px;
+    margin-bottom: 2rem;
+    padding-left: 20px;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text span {
+    color: var(--text-primary);
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  
+
+  /* Hero Image */
+  .hero-image {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    min-width: 280px;
+   
+  }
+  
+  .hero-image .pinklogo {
+    width: 400px;
+    z-index: 1;
+  }
+  
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-image {
+        justify-content: center;
+        margin-top: 2rem;
+      }
+  
+    .hero-image .phone {
+      position: relative;
+      left: 0;
+      margin-right: 1rem;
+    }
+  }
+    
+       /* section for apprenticeship and others */
+       .booking-section {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .form-parameter{
+        position: relative;
+        bottom: 50px;
+      }
+      .form-parameter:hover{
+        background-color: #FEC5F6;
+      }
+      
+      
+      .form-side {
+        flex: 1;
+        min-width: 300px;
+      }
+      
+      .image-grid {
+        flex: 1;
+        display: grid;
+        background-color: #FEC5F6;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+       min-width: 200px;
+       padding: 20px 30px;
+       border-radius: 10px;
+      }
+      .image-grid:hover{
+        border-radius: 10px;
+        background-color:#6b48c6 ;
+      }
+      
+      .image-grid img {
+        border-style: solid;
+        border-width: 10px;
+        border-color: white;
+        width: 100%;
+        height: 200px; /* Or whatever you prefer */
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      
+      
+
+      /* more images link setting */
+      .see-more:hover{
+        background-color: #000;
+      }
+  
+
+    /* section for form creation */
+    form {
+      max-width: 480px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background-color: #fff9f9;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+    
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 12px 14px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #fff;
+      transition: border 0.3s ease;
+    }
+    
+    form input:focus,
+    form select:focus,
+    form textarea:focus {
+      border-color: #c2185b;
+      outline: none;
+    }
+    
+    form label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+      color: #444;
+    }
+    
+    form textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    
+    form button {
+      width: 100%;
+      padding: 14px;
+      background-color: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    
+    form button:hover {
+      background-color: #d81b60;
+    }
+    
+    @media (max-width: 500px) {
+      form {
+        padding: 1.5rem;
+      }
+    }
+       /* home section website  */
+       .welcome-section {
+        background: linear-gradient(to right, #d1a2f3, #f3a2cc); /* pink to purple gradient */
+        height: 300px;
+        text-align: center;
+        padding-bottom: 38%;
+      }
+     
+        
+      .blinking {
+        font-size: 2.8rem;
+        color: #4d2e91; /* Heading color */
+        font-weight: bold;
+        animation: blinkText 1.5s infinite;
+        font-family: 'Segoe UI', sans-serif;
+      }
+      @keyframes blinkText {
+        0%   { opacity: 1; }
+        50%  { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      
+      .slider-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        height: 80vh; /* You can adjust this to fit your design */
+        padding-bottom: 20px;
+        gap: 10px;
+      }
+      
+      .slider-container::-webkit-scrollbar {
+        display: none;
+      }
+      
+      .slide {
+        min-width: 80%; /* Makes each slide fill the view */
+        height: 100%;
+        flex-shrink: 0; /* Prevent shrinking */
+      }
+      
+      .slide div {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0px 10px;
+      }      
+
+      #s1 div{
+        background-image: url(happy-turn.gif);}
+      #s2 div{
+          background-image: url(fashio-show.gif);}
+
+        @media (max-width: 768px) {
+          .slider-container {
+            height: 60vh;
+          }
+        
+          .blinking {
+            font-size: 1.8rem;
+          }
+        }
+        
+      
+      
+
+     /* brand category */
+ /* General Section Style */
+.styled-section {
+  text-align: center;
+  background: var(--gradient);
+  padding: 60px 20px;
+  color: #4b3f72;
+  font-family: 'Segoe UI', sans-serif;
+  border-bottom: 1px solid #eee;
+}
+
+.section-content h2 {
+  font-size: 2.5rem;
+  color: #735fd4;
+  margin-bottom: 10px;
+}
+
+.section-content p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* About Section - Unique Layout */
+.about-section {
+  background: var(--gradient);
+  padding: 60px 20px;
+  border-bottom: 1px solid #eee;
+  font-family: 'Segoe UI', sans-serif;
+  color: #4b3f72;
+}
+
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.profile img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-size: 2.5rem;
+  color: #735fd4;
+  margin-bottom: 10px;
+}
+
+.portfolio p {
+  font-size: 20px;
+  color: #333;
+  max-width: 500px;
+}
+
+/* Responsive stacking for small screens */
+@media (max-width: 768px) {
+  .about-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .portfolio p {
+    max-width: 100%;
+  }
+}
+ 
+    /* email button section  */
+.button-wrapper {
+  text-align: center; /* centers inline elements like <a> */
+  margin-top: 20px;
+}
+
+.email-btn {
+  display: inline-block; /* allows width, padding, margin */
+  padding: 10px 60px;
+  background-color: #735fd4;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+}
+.email-btn:hover{
+background-color: #cac5fef9;
+}
+
+
+/* social media icons and link  */
+.socials{
+  display: flex;           
+  justify-content: center; 
+  align-items: center;     
+  gap: 30px;               
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 10px 0 10px;
+  
+}
+  
+  

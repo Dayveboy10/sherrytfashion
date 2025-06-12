@@ -1,0 +1,50 @@
+
+  
+ body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #d1a2f3, #f3a2cc); /* pink to purple gradient */
+  color: #4d2e91; /* Heading color */
+  text-align: center;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.6); /* Paragraph color */
+  font-size: 1em;
+  margin-top: 0;
+}
+
+.masonry {
+  column-count: 3;            /* Number of columns */
+  column-gap: 15px;           /* Gap between columns */
+}
+
+.masonry img {
+  width: 100%;                /* Make image take full column width */
+  margin-bottom: 15px;        /* Spacing between images vertically */
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: white;
+  break-inside: avoid;        /* Prevent image breaking across columns */
+  object-fit: cover;          /* Nice scaling of images */
+}
+
+@media (max-width: 900px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry {
+    column-count: 1;
+  }
+}
