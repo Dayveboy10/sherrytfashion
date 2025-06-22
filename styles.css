@@ -463,7 +463,6 @@ nav a:hover {
 background-color: #cac5fef9;
 }
 
-
 /* social media icons and link  */
 .socials{
   display: flex;           
@@ -472,8 +471,20 @@ background-color: #cac5fef9;
   gap: 30px;               
   font-size: 30px;
   text-align: center;
-  padding: 10px 10px 0 10px;
-  
+  padding: 10px 10px 0 10px;  
+}
+
+footer {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+}
+
+.acc-links a {
+  margin: 0 0.5rem;
+  color: var(--white);
+  text-decoration: none;
 }
   
   
