@@ -276,7 +276,7 @@ nav a:hover {
       }
     }
        /* home section website  */
-       .welcome-section {
+      .welcome-section {
         background: linear-gradient(to right, #d1a2f3, #f3a2cc); /* pink to purple gradient */
         text-align: center;
       }
@@ -303,16 +303,19 @@ nav a:hover {
         height: 80vh; /* You can adjust this to fit your design */
         padding-bottom: 20px;
         gap: 10px;
+        scroll-snap-type: x mandatory;
       }
+
       
       .slider-container::-webkit-scrollbar {
         display: none;
       }
       
       .slide {
-        min-width: 80%; /* Makes each slide fill the view */
+        min-width: 80%; /* Use full width per slide */
         height: 100%;
-        flex-shrink: 0; /* Prevent shrinking */
+        flex-shrink: 0;
+        scroll-snap-align: start;
       }
       
       .slide div {
@@ -321,11 +324,15 @@ nav a:hover {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        padding: 0px 10px;
       }      
 
-      #s1 div{
-        background-image: url(happy-turn.gif);}
+       .bg-video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Make video fill container without distortion */
+        display: block;
+        }
+
       #s2 div{
           background-image: url(fashio-show.gif);}
 
@@ -338,6 +345,28 @@ nav a:hover {
             font-size: 1.8rem;
           }
         }
+
+     /* brand category */
+ /* General Section Style */
+.styled-section {
+  text-align: center;
+  background: var(--gradient);
+  padding: 60px 20px;
+  color: #4b3f72;
+  font-family: 'Segoe UI', sans-serif;
+  border-bottom: 1px solid #eee;
+}
+
+.section-content h2 {
+  font-size: 2.5rem;
+  color: #735fd4;
+  margin-bottom: 10px;
+}
+
+.section-content p {
+  font-size: 1.1rem;
+  color: #333;
+}
         
       
       
